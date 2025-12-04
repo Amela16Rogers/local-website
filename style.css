@@ -1477,3 +1477,395 @@ footer i {
         padding: 30px 0;
     }
 }
+
+/* Currency Specific Styles */
+.currency-symbol {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Update price styling */
+.price {
+    color: #d4a76a;
+    font-weight: 700;
+}
+
+.price::before {
+    content: "UGX ";
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* WhatsApp order summary currency */
+.whatsapp-order-price::before {
+    content: "UGX ";
+    font-weight: 600;
+}
+
+/* Cart modal currency */
+.cart-item-price::before {
+    content: "UGX ";
+    font-weight: 600;
+}
+
+/* Uganda Shillings Currency Styling */
+.ugx-price {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #2E8B57; /* Green color for money */
+}
+
+/* Price formatting with commas */
+.price {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile Money Payment Option */
+.payment-options {
+    background: #f0f9f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #25D366;
+}
+
+.payment-options h4 {
+    color: #2E8B57;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-options ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.payment-options li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-options i {
+    color: #25D366;
+    width: 20px;
+}
+
+/* Currency Converter (Optional) */
+.currency-converter {
+    background: #fff8e1;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    border: 1px dashed #ffd54f;
+}
+
+.currency-converter span {
+    font-weight: bold;
+    color: #ff8f00;
+}
+
+/* WhatsApp Uganda specific */
+.uganda-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.uganda-whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E, #075E54);
+}
+
+/* Update existing WhatsApp button */
+.whatsapp-send-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+}
+
+/* Uganda flag colors */
+.uganda-flag {
+    background: linear-gradient(to bottom, #000000 33%, #FFD100 33% 66%, #D90000 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* ====================
+   CART MODAL FIXES
+   ==================== */
+
+/* Ensure cart modal is visible */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cart-content {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: modalSlideIn 0.3s ease;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    z-index: 1;
+}
+
+.cart-header h2 {
+    color: #8b4513;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* Cart items area */
+.cart-items {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-info h4 {
+    margin: 0 0 5px 0;
+    color: #8b4513;
+    font-size: 1.1rem;
+}
+
+.cart-item-info p {
+    margin: 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.cart-item-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-item-price {
+    color: #d4a76a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 100px;
+    text-align: right;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 40px 20px;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* CART TOTAL - FIXED VISIBILITY */
+.cart-total {
+    padding: 20px;
+    border-top: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    border-radius: 0 0 10px 10px;
+}
+
+.cart-total p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #8b4513;
+    margin: 0;
+}
+
+#cartTotal {
+    color: #d4a76a;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.checkout-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #d4a76a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #b38b5a;
+}
+
+/* WhatsApp cart button */
+.whatsapp-cart-btn {
+    background: #25D366 !important;
+    color: white !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+    padding: 12px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    transition: background-color 0.3s !important;
+}
+
+.whatsapp-cart-btn:hover {
+    background: #128C7E !important;
+}
+
+/* Cart count visibility */
+.cart-count {
+    background-color: #d4a76a;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    min-width: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Debug styles - make sure everything is visible */
+.debug-visible * {
+    border: 1px solid red !important;
+}
+
+/* Modal animation */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrollbar for cart items */
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive cart */
+@media (max-width: 480px) {
+    .cart-modal {
+        padding: 10px;
+    }
+    
+    .cart-content {
+        max-height: 90vh;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .cart-item-details {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .cart-total {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .cart-total p {
+        font-size: 1.2rem;
+    }
+}
